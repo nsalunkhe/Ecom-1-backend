@@ -33,7 +33,7 @@ const AnalyticsPageComponent = ({
       const socket = socketIOClient();
       let today = new Date().toDateString();
       const handler = (newOrder) => {
-          var orderDate = new Date(newOrder.createdAt).toLocaleString("en-US", { hour: "numeric", hour12: true, timeZone: "UTC" });
+          var orderDate = new Date(newOrder.createdAt).toLocaleString("en-US", { hour: "numeric", hour12: true, timeZone: "Asia/Kolkata" });
           if (new Date(newOrder.createdAt).toDateString() === today) {
               if (today === new Date(firstDateToCompare).toDateString()) {
                   setDataForFirstSet((prev) => {
@@ -81,7 +81,7 @@ const AnalyticsPageComponent = ({
           var date = new Date(order.createdAt).toLocaleString("en-US", {
             hour: "numeric",
             hour12: true,
-            timeZone: "UTC",
+            timeZone: "Asia/Kolkata",
           });
           return { name: date, [firstDateToCompare]: orderSum };
         });
@@ -101,7 +101,7 @@ const AnalyticsPageComponent = ({
           var date = new Date(order.createdAt).toLocaleString("en-US", {
             hour: "numeric",
             hour12: true,
-            timeZone: "UTC",
+            timeZone: "Asia/Kolkata",
           });
           return { name: date, [secondDateToCompare]: orderSum };
         });

@@ -176,16 +176,16 @@ const UserProfilePageComponent = ({ updateUserApiRequest, fetchUser, userInfoFro
                 Both passwords should match
               </Form.Control.Feedback>
             </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Update
-            </Button>
             <Alert show={updateUserResponseState && updateUserResponseState.error !== ""} variant="danger">
               Something went wrong
             </Alert>
             <Alert show={updateUserResponseState && updateUserResponseState.success === "user updated"} variant="info">
               User updated
             </Alert>
+
+            <Button variant="primary" type="submit" style={{marginBottom:"50px",width:"100%"}}>
+              Update
+            </Button>
           </Form>
         </Col>
       </Row>
