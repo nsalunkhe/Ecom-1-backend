@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // components:
 import HeaderComponent from "./components/HeaderComponent";
-// import FooterComponent from "./components/FooterComponent";
+import FooterComponent from "./components/FooterComponent";
 
 //user components:
 import RoutesWithUserChatComponent from "./components/user/RoutesWithUserChatComponent";
@@ -93,7 +93,7 @@ function App() {
           <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
         </Route>
       </Routes>
-      {/* <FooterComponent /> */}
+      <FooterComponent />
     </BrowserRouter>
     
   );
